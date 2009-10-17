@@ -8,12 +8,10 @@
     Предусмотреть функции инверсии списка (123->321) и поиска подсписка в списке.
 */
 
-// На этот файл не обращать внимание
-#include "../../vs_compatibility_for_linux.h"
-
 #include <iostream>
 using namespace std;
 #include <stdlib.h>
+#include <time.h>
 
 #include <iomanip>
 #include "list.h"
@@ -21,11 +19,8 @@ using namespace std;
 
 int main (void)
 {
-    // Очищать экран, перед запуском программы
-    clrscr();
-    
     // Каждый раз генерировать разные случайные числа    
-    randomize();
+    srand ( time(NULL) );
     
     // создание списка из 20 элементов
     List l1(10);    

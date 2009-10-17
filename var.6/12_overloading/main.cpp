@@ -13,21 +13,17 @@
     Определить функцию-элемент класса для удаления элемента  с определенного места списка.
 */
 
-// На этот файл не обращать внимание
-#include "../../vs_compatibility_for_linux.h"
-
 #include <iostream>
 using namespace std;
 #include <stdlib.h>
+#include <time.h>
 
 #include "list.h"
 #include "list.cpp"
 
 int main(){
-    // Очищать экран, перед запуском программы
-    clrscr();    
     // Каждый раз генерировать разные случайные числа    
-    randomize();
+    srand ( time(NULL) );
 
     List l1(10);
     List l2(l1);

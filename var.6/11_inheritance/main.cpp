@@ -10,9 +10,6 @@
     Используя виртуальные функции, не зная с объектом какого класса вы работаете, выведите на экран возраст и название должности.
 */
 
-// На этот файл не обращать внимание
-#include "../../vs_compatibility_for_linux.h"
-
 #include <iostream>
 using namespace std;
 #include <stdlib.h>

@@ -7,12 +7,11 @@
     Значения элементов L и L1 ввести с клавиатуры.
 */
 
-// На этот файл не обращать внимание
-#include "../vs_compatibility_for_linux.h"
 
 #include <iostream>
 using namespace std;
 #include <stdlib.h>
+#include <time.h>
 
 //Структура элемента стэка
 struct Node
@@ -65,11 +64,8 @@ int main()
 
     NodePtr new_element; // Используется для изменения текущего списка
     
-    // Очищать экран, перед запуском программы
-    clrscr();
-
     // Каждый раз генерировать разные случайные числа    
-    randomize();
+    srand ( time(NULL) );
 
     cout << "Введите количество элементов в списке: ";
     cin >> N; // Ожидаем ввода пользователя
@@ -84,7 +80,7 @@ int main()
             head = new Node;            
             
             // Заполняем значение элемента случайными числами от -5 до 5
-	    head->data = random(10) - 5;
+	    head->data = rand()%10 - 5;
             
             // Устанавливаем значение link в NULL, так как это первый элемент нашего стэка
 	    head->next = NULL;
@@ -94,7 +90,7 @@ int main()
             // Создаем новый элемент типа Node
             current = new Node;
             
-            current->data = random(10) - 5;
+            current->data = rand()%10 - 5;
 
             // Для нового элемента, следующим будет последний созданный, который постоянно находится в head
 	    current->next = head;
